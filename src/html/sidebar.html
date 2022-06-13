@@ -1,0 +1,294 @@
+<aside class="sidebar">
+    <h2 class="sidebar__title">Выбрана 1 дата</h2>
+    <form action="/services" method="POST" id="form">
+        <div class="form__from">
+            <input class="form__from-input" name="from" type="date" value="" required>
+        </div>
+        <div class="form__to">
+            <input class="form__from-input" id="to-date" name="to" type="date" value="">
+        </div>
+        <div class="form__notend">
+            <input id="notend" class="form__input-checked" name="notend" type="checkbox">
+            <label for="notend" class="form__label-checked"></label>
+            <span>Без конечной даты</span>
+        </div>
+        <div class="form__tip">
+            <img src="@img/tip-ico.svg" alt="Tip">
+            <p class="form__tip-text">
+                К каким дням недели вы хотите применить изменения?
+            </p>
+        </div>
+        <div class="form__checked-weekday">
+            <div class="form__weeksall">
+                <input id="weeksall" class="form__input-checked" type="radio">
+                <label for="weeksall" class="form__label-checked"></label>
+                <span>Выбрать все</span>
+            </div>
+
+            <div class="form__weekday-list">
+                <div class="form__weekday">
+                    <input id="monday" class="form__weekday-input" name="monday" type="checkbox" value="0">
+                    <label for="monday" class="form__weekday-label">Пн</label>
+                </div>
+                <div class="form__weekday">
+                    <input id="tuesday" class="form__weekday-input" name="tuesday" type="checkbox" value="1">
+                    <label for="tuesday" class="form__weekday-label">Вт</label>
+                </div>
+                <div class="form__weekday">
+                    <input id="wendsday" class="form__weekday-input" name="wendsday" type="checkbox" value="2">
+                    <label for="wendsday" class="form__weekday-label">Ср</label>
+                </div>
+                <div class="form__weekday">
+                    <input id="thursday" class="form__weekday-input" name="thursday" type="checkbox" value="3">
+                    <label for="thursday" class="form__weekday-label">Чт</label>
+                </div>
+                <div class="form__weekday">
+                    <input id="friday" class="form__weekday-input" name="friday" type="checkbox" value="4">
+                    <label for="friday" class="form__weekday-label">Пт</label>
+                </div>
+                <div class="form__weekday">
+                    <input id="saturday" class="form__weekday-input" name="saturday" type="checkbox" value="5">
+                    <label for="saturday" class="form__weekday-label">Сб</label>
+                </div>
+                <div class="form__weekday">
+                    <input id="sunday" class="form__weekday-input" name="sunday" type="checkbox" value="6">
+                    <label for="sunday" class="form__weekday-label">Вс</label>
+                </div>
+            </div>
+        </div>
+        <div class="form__reserv">
+            <h4 class="form__title">Открыть или закрыть
+            для бронирования</h4>
+            <div class="form__open">
+                <div class="form__open-item">
+                    <input id="opened" class="form__input-checked" checked name="opened" type="radio">
+                    <label for="opened" class="form__label-checked"></label>
+                    <span>Открыто</span>
+                </div>
+                <div class="form__open-item">
+                    <input id="closed" class="form__input-checked" name="opened" type="radio">
+                    <label for="closed" class="form__label-checked"></label>
+                    <span>Закрыто</span>
+                </div>
+            </div>
+        </div>
+        <div class="form__quantity">
+            <h4 class="form__title">Выберите количество на продажу</h4>
+            <div class="select select-form">
+                <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M1.16667 1L6.58334 6L12 1" stroke="black"/>
+                </svg>
+                <select name="quantitySale" id="quantity-sale">
+                    <option value="0">На продажу 0</option>
+                    <option value="1">На продажу 1</option>
+                    <option value="2">На продажу 2</option>
+                    <option value="3">На продажу 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="form__tariffs">
+            <h4 class="form__title">Тарифы</h4>
+            <div class="form__tariff-item">
+                <h5 class="form__tariffs-title">Standart Rate</h5>
+                <input type="hidden" name="type_std" value="Standart Rate">
+                <div class="form__open">
+                    <div class="form__open-item">
+                        <input id="open_std" class="form__input-checked" checked name="open_std" type="radio">
+                        <label for="open_std" class="form__label-checked"></label>
+                        <span>Открыто</span>
+                    </div>
+                    <div class="form__open-item">
+                        <input id="close_std" class="form__input-checked" name="open_std" type="radio">
+                        <label for="close_std" class="form__label-checked"></label>
+                        <span>Закрыто</span>
+                    </div>
+                </div>
+                <div class="form__tariff-item-price">
+                    <label class="form__label">
+                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.333984" width="32" height="32" rx="5" fill="#EEEEEE"/>
+                            <path d="M11.074 15.44H12.494V9.06H16.154C16.834 9.06 17.454 9.14 18.014 9.3C18.574 9.44667 19.054 9.68 19.454 10C19.854 10.3067 20.1673 10.7 20.394 11.18C20.6207 11.66 20.734 12.2333 20.734 12.9C20.734 13.5667 20.614 14.1467 20.374 14.64C20.134 15.1333 19.8073 15.5467 19.394 15.88C18.9807 16.2 18.494 16.44 17.934 16.6C17.374 16.76 16.7673 16.84 16.114 16.84H14.094V18.86H17.314V20.18H14.094V23H12.494V20.18H11.074V18.86H12.494V16.84H11.074V15.44ZM16.154 15.44C17.074 15.44 17.794 15.2333 18.314 14.82C18.8473 14.3933 19.114 13.7533 19.114 12.9C19.114 12.0467 18.8473 11.4267 18.314 11.04C17.794 10.6533 17.074 10.46 16.154 10.46H14.094V15.44H16.154Z" fill="black"/>
+                        </svg>
+                        <input class="form__tariff-price" name="price_std" type="text" placeholder="Цена" required>
+                    </label>
+                    <div class="select select-tariff">
+                        <svg class="man" width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.72184" cy="3.62907" r="3.35661" fill="#272E35"/>
+                            <path d="M15.1031 13.6988C15.1031 15.0414 11.7465 17.7267 7.71852 17.7267C3.69059 17.7267 0.333984 15.0414 0.333984 13.6988C0.333984 12.3561 3.26939 8.32819 7.71852 8.32819C12.1676 8.32819 15.1031 12.3561 15.1031 13.6988Z" fill="#272E35"/>
+                        </svg>
+                        <svg
+                            class="arrow"
+                            width="13"
+                            height="7"
+                            viewBox="0 0 13 7"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M1.16667 1L6.58334 6L12 1" stroke="black"/>
+                        </svg>
+                        <select name="guests_std">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form__tariff-item">
+                <h5  class="form__tariffs-title">Non-refundable Rate</h5>
+                <input type="hidden" name="type_rfd" value="Non-refundable Rate">
+                <div class="form__open">
+                    <div class="form__open-item">
+                        <input id="open_rfd" class="form__input-checked" checked name="open_rfd" type="radio">
+                        <label for="open_rfd" class="form__label-checked"></label>
+                        <span>Открыто</span>
+                    </div>
+                    <div class="form__open-item">
+                        <input id="close_rfd" class="form__input-checked" name="open_rfd" type="radio">
+                        <label for="close_rfd" class="form__label-checked"></label>
+                        <span>Закрыто</span>
+                    </div>
+                </div>
+                <div class="form__tariff-item-price">
+                    <label class="form__label">
+                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.333984" width="32" height="32" rx="5" fill="#EEEEEE"/>
+                            <path d="M11.074 15.44H12.494V9.06H16.154C16.834 9.06 17.454 9.14 18.014 9.3C18.574 9.44667 19.054 9.68 19.454 10C19.854 10.3067 20.1673 10.7 20.394 11.18C20.6207 11.66 20.734 12.2333 20.734 12.9C20.734 13.5667 20.614 14.1467 20.374 14.64C20.134 15.1333 19.8073 15.5467 19.394 15.88C18.9807 16.2 18.494 16.44 17.934 16.6C17.374 16.76 16.7673 16.84 16.114 16.84H14.094V18.86H17.314V20.18H14.094V23H12.494V20.18H11.074V18.86H12.494V16.84H11.074V15.44ZM16.154 15.44C17.074 15.44 17.794 15.2333 18.314 14.82C18.8473 14.3933 19.114 13.7533 19.114 12.9C19.114 12.0467 18.8473 11.4267 18.314 11.04C17.794 10.6533 17.074 10.46 16.154 10.46H14.094V15.44H16.154Z" fill="black"/>
+                        </svg>
+                        <input class="form__tariff-price" name="price_rfd" type="text" placeholder="Цена" required>
+                    </label>
+                    <div class="select select-tariff">
+                        <svg class="man" width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.72184" cy="3.62907" r="3.35661" fill="#272E35"/>
+                            <path d="M15.1031 13.6988C15.1031 15.0414 11.7465 17.7267 7.71852 17.7267C3.69059 17.7267 0.333984 15.0414 0.333984 13.6988C0.333984 12.3561 3.26939 8.32819 7.71852 8.32819C12.1676 8.32819 15.1031 12.3561 15.1031 13.6988Z" fill="#272E35"/>
+                        </svg>
+                        <svg
+                            class="arrow"
+                            width="13"
+                            height="7"
+                            viewBox="0 0 13 7"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M1.16667 1L6.58334 6L12 1" stroke="black"/>
+                        </svg>
+                        <select name="guests_rfd">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form__tariff-item">
+                <h5  class="form__tariffs-title">Non-refundable Rate</h5>
+                <input type="hidden" name="type_rfdn" value="Non-refundable Rate2">
+                <div class="form__open">
+                    <div class="form__open-item">
+                        <input id="open_rfdn" class="form__input-checked" checked name="open_rfdn" type="radio">
+                        <label for="open_rfdn" class="form__label-checked"></label>
+                        <span>Открыто</span>
+                    </div>
+                    <div class="form__open-item">
+                        <input id="close_rfdn" class="form__input-checked" name="open_rfdn" type="radio">
+                        <label for="close_rfdn" class="form__label-checked"></label>
+                        <span>Закрыто</span>
+                    </div>
+                </div>
+                <div class="form__tariff-item-price">
+                    <label class="form__label">
+                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.333984" width="32" height="32" rx="5" fill="#EEEEEE"/>
+                            <path d="M11.074 15.44H12.494V9.06H16.154C16.834 9.06 17.454 9.14 18.014 9.3C18.574 9.44667 19.054 9.68 19.454 10C19.854 10.3067 20.1673 10.7 20.394 11.18C20.6207 11.66 20.734 12.2333 20.734 12.9C20.734 13.5667 20.614 14.1467 20.374 14.64C20.134 15.1333 19.8073 15.5467 19.394 15.88C18.9807 16.2 18.494 16.44 17.934 16.6C17.374 16.76 16.7673 16.84 16.114 16.84H14.094V18.86H17.314V20.18H14.094V23H12.494V20.18H11.074V18.86H12.494V16.84H11.074V15.44ZM16.154 15.44C17.074 15.44 17.794 15.2333 18.314 14.82C18.8473 14.3933 19.114 13.7533 19.114 12.9C19.114 12.0467 18.8473 11.4267 18.314 11.04C17.794 10.6533 17.074 10.46 16.154 10.46H14.094V15.44H16.154Z" fill="black"/>
+                        </svg>
+                        <input class="form__tariff-price" name="price_rfdn" type="text" placeholder="Цена" required>
+                    </label>
+                    <div class="select select-tariff">
+                        <svg class="man" width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.72184" cy="3.62907" r="3.35661" fill="#272E35"/>
+                            <path d="M15.1031 13.6988C15.1031 15.0414 11.7465 17.7267 7.71852 17.7267C3.69059 17.7267 0.333984 15.0414 0.333984 13.6988C0.333984 12.3561 3.26939 8.32819 7.71852 8.32819C12.1676 8.32819 15.1031 12.3561 15.1031 13.6988Z" fill="#272E35"/>
+                        </svg>
+                        <svg
+                            class="arrow"
+                            width="13"
+                            height="7"
+                            viewBox="0 0 13 7"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M1.16667 1L6.58334 6L12 1" stroke="black"/>
+                        </svg>
+                        <select name="guests_rfdn">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form__tariff-item">
+                <h5  class="form__tariffs-title">Weekly Rate</h5>
+                <input type="hidden" name="type_wkl" value="Weekly Rate">
+                <div class="form__open">
+                    <div class="form__open-item">
+                        <input id="open_wkl" class="form__input-checked" checked name="open_wkl" type="radio">
+                        <label for="open_wkl" class="form__label-checked"></label>
+                        <span>Открыто</span>
+                    </div>
+                    <div class="form__open-item">
+                        <input id="close_wkl" class="form__input-checked" name="open_wkl" type="radio">
+                        <label for="close_wkl" class="form__label-checked"></label>
+                        <span>Закрыто</span>
+                    </div>
+                </div>
+                <div class="form__tariff-item-price">
+                    <label class="form__label">
+                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.333984" width="32" height="32" rx="5" fill="#EEEEEE"/>
+                            <path d="M11.074 15.44H12.494V9.06H16.154C16.834 9.06 17.454 9.14 18.014 9.3C18.574 9.44667 19.054 9.68 19.454 10C19.854 10.3067 20.1673 10.7 20.394 11.18C20.6207 11.66 20.734 12.2333 20.734 12.9C20.734 13.5667 20.614 14.1467 20.374 14.64C20.134 15.1333 19.8073 15.5467 19.394 15.88C18.9807 16.2 18.494 16.44 17.934 16.6C17.374 16.76 16.7673 16.84 16.114 16.84H14.094V18.86H17.314V20.18H14.094V23H12.494V20.18H11.074V18.86H12.494V16.84H11.074V15.44ZM16.154 15.44C17.074 15.44 17.794 15.2333 18.314 14.82C18.8473 14.3933 19.114 13.7533 19.114 12.9C19.114 12.0467 18.8473 11.4267 18.314 11.04C17.794 10.6533 17.074 10.46 16.154 10.46H14.094V15.44H16.154Z" fill="black"/>
+                        </svg>
+                        <input class="form__tariff-price" name="price_wkl" type="text" placeholder="Цена" required>
+                    </label>
+                    <div class="select select-tariff">
+                        <svg class="man" width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.72184" cy="3.62907" r="3.35661" fill="#272E35"/>
+                            <path d="M15.1031 13.6988C15.1031 15.0414 11.7465 17.7267 7.71852 17.7267C3.69059 17.7267 0.333984 15.0414 0.333984 13.6988C0.333984 12.3561 3.26939 8.32819 7.71852 8.32819C12.1676 8.32819 15.1031 12.3561 15.1031 13.6988Z" fill="#272E35"/>
+                        </svg>
+                        <svg
+                            class="arrow"
+                            width="13"
+                            height="7"
+                            viewBox="0 0 13 7"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M1.16667 1L6.58334 6L12 1" stroke="black"/>
+                        </svg>
+                        <select name="guests_wkl" id="months">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="form__descr">Изменения будут применены к этому периоду:
+            <span id="date-from"> 20 апреля 2022</span> —
+            <span id="date-to"> 23 апреля 2022</span>.
+        </p>
+        <button class="form__reset" type="reset">Отменить</button>
+        <button  class="form__send" type="submit">Сохранить</button>
+    </form>
+
+</aside>

@@ -1,0 +1,114 @@
+.calendar__title {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    margin-bottom: 30px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.week__day {
+    width: 150px;
+    height: 57px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    border-top: 1px solid rgba(39, 46, 53, 0.11);
+}
+
+.week__day + .week__day {
+    border-left: 1px solid rgba(39, 46, 53, 0.11);
+}
+
+.week__day:last-child {
+    border-right: 1px solid rgba(39, 46, 53, 0.11);
+}
+
+td {
+    position: relative;
+    width: 150px;
+    height: 129px;
+    align: left;
+    vertical-align: top;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    border-left: 1px solid rgba(39, 46, 53, 0.11);
+    border-bottom: 1px solid rgba(39, 46, 53, 0.11);
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+td:last-child {
+    border-right: 1px solid rgba(39, 46, 53, 0.11);
+}
+
+#calendar {
+    max-width: 1180px;
+}
+
+.calendar__box {
+    padding: 30px 65px;
+    margin-right: 20px;
+    background-color: #fff;
+}
+
+.select-day {
+    position: relative;
+    background-color: #f1f1f1;
+    border: 2px solid #272E35!important;
+
+    &::before,
+    &::after  {
+        cursor: pointer;
+        display: inline-block;
+        position: absolute;
+        content: url('../images/lines.svg');
+        width: 11px;
+        height: 20px;
+        transform: translateY(-50%);
+        border-left: 10px solid #272E35;
+        border-right: 10px solid #272E35;
+        border-top: 6px solid #272E35;
+        border-bottom: 8px solid #272E35;
+        background-color: #272E35;
+    }
+
+    &::before {
+        left: -17px;
+        top: 50%;
+    }
+
+    &::after {
+        right: -17px;
+        top: 50%;
+    }
+
+    &--active {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &--start {
+        &::after {
+            display: none;
+        }
+    }
+    
+    &--end {
+        &::before {
+            display: none;
+        }
+    }
+}

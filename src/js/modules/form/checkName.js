@@ -1,0 +1,1 @@
+export const checkName = name => ["monday", "tuesday", "wendsday", "thursday", "friday", "saturday", "sunday"].includes(name)

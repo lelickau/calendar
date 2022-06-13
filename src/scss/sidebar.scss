@@ -1,0 +1,225 @@
+.sidebar {
+    padding: 30px 22px 45px 22px;
+    overflow: auto;
+    height: calc(100vh - 120px);
+    background-color: #fff;
+
+    &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    }
+}
+
+.form {
+    &__tariff-item {
+        margin-bottom: 30px;
+    }
+    &__reserv,
+    &__quantity,
+    &__weekday-list,
+    &__tariff-item-price {
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    &__reserv::after,
+    &__quantity::after,
+    &__weekday-list::after,
+    &__tariff-item-price::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #272E35;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__title {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000;
+    }
+
+    &__tip {
+        display: flex;
+        align-items: start;
+        margin-top: 20px;
+    }
+
+    &__tip-text {
+        margin: 0;
+        margin-left: 18px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000;
+    }
+
+    &__from-input {
+        width: 100%;
+        height: 50px;
+        padding-left: 10px;
+        border: 1px solid #272E35;
+    }
+
+    &__weekday-list {
+        display: grid;
+        grid-template-columns: repeat(4, 47px);
+        gap: 5px;
+        margin-top: 19px;
+    }
+
+    &__weekday {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 47px;
+        height: 37px;
+        background: #FFFFFF;
+    }
+
+    &__tariffs &__title {
+        margin-bottom: 10px;
+    }
+
+    &__tariffs-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        position: relative;
+        display: inline-block;
+        width: 199px;
+        height: 50px;
+    }
+
+    &__label svg {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+    }
+
+    &__tariff-price {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #272E35;
+        padding: 0 0 0 62px;
+    }
+
+    &__tariff-item-price {
+        margin-top: 20px;
+    }
+
+    &__descr {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 30px;
+    }
+
+    &__reset {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 49px;
+        background: #FFFFFF;
+        border: 1px solid #272E35;
+        margin-bottom: 10px;
+    }
+
+    &__send {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 49px;
+        background: #272E35;
+        border: 1px solid #272E35;
+        color: #fff;
+
+        &:disabled {
+            cursor: no-drop;
+            background-color: rgb(90, 90, 90);
+        }
+    }
+
+    &__weekday-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #272E35;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__weekday-input {
+        display: none;
+    }
+
+    &__weekday-input:checked + &__weekday-label {
+        background-color: #eeeeee;
+        border: none;
+        border-radius: 5px;
+    }
+
+    &__notend {
+        display: flex;
+        align-items: center;
+        margin-top: 26px;
+    }
+
+    &__label-checked {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+    &__input-checked {
+        display: none;
+    }
+
+    &__input-checked:checked + &__label-checked {
+        background-image: url('../images/radio.svg');
+        border: none;
+    }
+
+    &__weeksall {
+        margin-top: 20px;
+    }
+
+    &__open {
+        display: flex;
+        align-items: center;
+    }
+
+    &__open-item {
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            margin-left: 15px;
+        }
+    }
+}

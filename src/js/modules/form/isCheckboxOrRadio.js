@@ -1,0 +1,1 @@
+export const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type)

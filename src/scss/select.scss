@@ -1,0 +1,72 @@
+.select {
+    position: relative;
+    margin-right: 10px;
+
+    & select {
+        position: relative;
+        display: inline-block;
+        width: 139px;
+        height: 37px;
+        padding: 10px;
+        background: #FFFFFF;
+        border: 1px solid #272E35;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding-right: 25px;
+    }
+
+    & svg {
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        z-index: 100;
+    }
+
+    &-settings select {
+        width: 246px;
+    }
+
+    &-date {
+        margin-right: 20px;
+    }
+
+    &-form select {
+        width: 100%;
+        border-radius: 0;
+        height: 50px;
+    }
+
+    &-form svg {
+        top: 22px;
+        right: 15px;
+    }
+
+    &-tariff {
+        display: inline-block;
+        width: 96px;
+    }
+
+    &-tariff .man {
+        left: 18px;
+        top: 16px;
+        position: absolute;
+
+    }
+    &-tariff .arrow {
+        position: absolute;
+        top: 21px;
+        right: 17px;
+
+    }
+    &-tariff select {
+        border-radius:0;
+        width: 96px;
+        height: 50px;
+        padding-left: 39px;
+    }
+}

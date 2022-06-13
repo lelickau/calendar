@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 77px;
+
+    &__navigate {
+        display: flex;
+    }
+
+    &__show-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #272E35;
+        margin-left: 35px;
+    }
+
+    &__show-advice {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 122px;
+        height: 37px;
+        gap: 10px;
+        background: #FFFFFF;
+        border: 1px solid #272E35;
+        border-radius: 5px;
+    }
+
+    &__show-advice img{
+        height: 25px;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__advice-ico {
+        width: 33px;
+    }
+}
+
+
+.advices {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+}
+
+
+.advices__text {
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.arr__left {
+    margin-right: 5px;
+}
+
+.arr__left,
+.arr__right {
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    width: 37px;
+    height: 37px;
+    background: #FFFFFF;
+    border: 1px solid #272E35;
+    border-radius: 5px;
+}
